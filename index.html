@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>myWeb</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="主攻Java，熟悉spring springBoot框架">
+<meta name="keywords" content="java,springBoot">
+<meta property="og:type" content="website">
+<meta property="og:title" content="myWeb">
+<meta property="og:url" content="https://bigpig18.github.io/index.html">
+<meta property="og:site_name" content="myWeb">
+<meta property="og:description" content="主攻Java，熟悉spring springBoot框架">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="myWeb">
+<meta name="twitter:description" content="主攻Java，熟悉spring springBoot框架">
+  
+    <link rel="alternate" href="/atom.xml" title="myWeb" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">myWeb</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Java</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://bigpig18.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-Git-Study" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/21/Git-Study/" class="article-date">
+  <time datetime="2019-07-21T15:10:01.472Z" itemprop="datePublished">2019-07-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/21/Git-Study/">Git</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Git：git是一款优秀的开源分布式版本控制框架</p>
+<h2 id="Git快速入门"><a href="#Git快速入门" class="headerlink" title="Git快速入门"></a>Git快速入门</h2><h3 id="Git安装-Centos7-Windows"><a href="#Git安装-Centos7-Windows" class="headerlink" title="Git安装(Centos7 + Windows)"></a>Git安装(Centos7 + Windows)</h3><h3 id="Centos7"><a href="#Centos7" class="headerlink" title="Centos7"></a>Centos7</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yum install git</span><br></pre></td></tr></table></figure>
+
+<h4 id="查看是否安装成功"><a href="#查看是否安装成功" class="headerlink" title="查看是否安装成功"></a>查看是否安装成功</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git --version</span><br></pre></td></tr></table></figure>
+
+<p>或者</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ rpm -qa | grep git</span><br></pre></td></tr></table></figure>
+
+<h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h3><p>Git下载地址<strong><a href="http://git-scm.com/downloads" target="_blank" rel="noopener">Git下载</a></strong><br><br>然后一路点击下一步选择默认安装即可.<br><br>安装完成后，随便进到一个文件夹中，点击右键.<br><br>出现 <strong>Git Bash Here</strong> 以及 <strong>Git GUI Here</strong> 选项表示安装成功.</p>
+<h3 id="创建Git仓库-repository"><a href="#创建Git仓库-repository" class="headerlink" title="创建Git仓库(repository)"></a>创建Git仓库(repository)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir myFirRep</span><br><span class="line">$ <span class="built_in">cd</span> myFirRep</span><br><span class="line">$ git init</span><br></pre></td></tr></table></figure>
+
+<p>这个时候文件夹中会自动创建一个<strong>.git</strong>文件夹，它是用来跟踪管理你的仓库的，不过它是隐藏的.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ls -ah</span><br></pre></td></tr></table></figure>
+
+<p>使用上述命令可以查看到它，最好不要去动它，一不小心就可能把你的仓库搞坏.<br><br>然后就是最后一步了，输入下列命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"yourName"</span> <span class="comment">#你的真实名字</span></span><br><span class="line">$ git config --global user.email <span class="string">"yourEmail@example.com"</span> <span class="comment">#能联系到你的邮箱</span></span><br></pre></td></tr></table></figure>
+
+<p>这就相当于自报家门了，<strong>–global</strong> 参数是表示你机器上所有的<strong>Git</strong>仓库都会用的上述用户名及邮箱.</p>
+<h3 id="添加文件到仓库"><a href="#添加文件到仓库" class="headerlink" title="添加文件到仓库"></a>添加文件到仓库</h3><h3 id="Centos7-1"><a href="#Centos7-1" class="headerlink" title="Centos7"></a>Centos7</h3><p>我们先创建一个文本文件 <strong>myGit.md</strong>，随便在里面写点东西，然后执行下面的命令.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ vim myGit.md <span class="comment">#:wq 保存退出</span></span><br><span class="line">$ git add myGit.md</span><br></pre></td></tr></table></figure>
+
+<p>这个时候我们就把<strong>myGit</strong>文件添加到仓库了，但是除了添加，在git中还要提交到仓库才算完.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m <span class="string">"my first commit"</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>-m</strong>参数后面跟你此次提交了些什么东西，在开发中，一定要写上，同时最好是有意义的东西！</p>
+<h3 id="Windows-1"><a href="#Windows-1" class="headerlink" title="Windows"></a>Windows</h3><p>在windows中，首先进入你要创建Git仓库的文件夹，<br><br>右键点击，选择 <strong>Git Bash Here</strong>，<br><br>后面的操作就跟在 <strong>Centos7</strong> 系统下从创建文本文件开始的操作一致了.</p>
+<h3 id="工作区状态"><a href="#工作区状态" class="headerlink" title="工作区状态"></a>工作区状态</h3><p>我们先修改一下 <strong>myGit.md</strong> 文件，添加删除一些字段都行.<br><br>在<strong>Git</strong>中，如果你修改了文件，但是又不知道修改了什么，这个时候下面的命令就能帮到你了</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git diff myGit.md</span><br></pre></td></tr></table></figure>
+
+<p><strong>Git</strong>会很清楚的告诉你，你做了啥子.<br><br>当然，如果你连你修没修改都忘了，emmmm… 还是有命令可以帮到你的</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br></pre></td></tr></table></figure>
+
+<p><strong>Git</strong>会告诉你，哪个文件被修改过.<br><br>但是，如果你修改了很多很多次这个文件，但是你不记得你之前修改了啥子东西，</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span></span><br></pre></td></tr></table></figure>
+
+<p>这个命令可以帮助你看到最近到最远的提交日志.<br><br>同时，Git还提供了一个命令可以查看你之前用过的每个命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reflog</span><br></pre></td></tr></table></figure>
+
+<p>在 <strong>git log</strong> 中，如果你 <strong>commit</strong> 文件了，你可以看的在 <strong>commit</strong> 后面跟了一串哈希数值，他是版本号(commit id),<br>当你觉得这次的修改错了，你要回退到上一次修改，你可以根据版本号去回退.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard ff3ed7aac11ae3950646c8e18d269236f2cb5f3b</span><br></pre></td></tr></table></figure>
+
+<p>当然你可以不用写这么一大串，只写前面几个 <strong>Git</strong> 会帮你找到的.<br><br>使用 <strong>git reflog</strong> 命令，你会发现其中有个 <strong>HEAD</strong> 参数，这个可以表示版本 – 当前版本 <strong>HEAD@{0}</strong> 或 <strong>HEAD</strong>,<br>上一个版本 <strong>HEAD@{1}</strong> 或 <strong>HEAD^</strong> , 一直到后面.你也可以用 <strong>HEAD</strong> 这个参数来版本回退的.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard HEAD^</span><br></pre></td></tr></table></figure>
+
+<p>这就是回退到上一个版本.</p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p>廖雪峰老师写的<a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">Git教程</a>.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://bigpig18.github.io/2019/07/21/Git-Study/" data-id="cjyd3m8vr0000vcv2qnhicgj3" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/21/hello-world/" class="article-date">
+  <time datetime="2019-07-21T14:54:05.054Z" itemprop="datePublished">2019-07-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/21/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://bigpig18.github.io/2019/07/21/hello-world/" data-id="cjyd3m8w70001vcv2lp1zc8t9" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/07/21/Git-Study/">Git</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/21/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 蓝天<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
